@@ -1,0 +1,4 @@
+It is a array like object but not an array.
+
+You can get attributes of an object.
+You can get parentNode of an object.

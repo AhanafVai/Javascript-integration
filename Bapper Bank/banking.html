@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Ahanaf</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="mt-10 text-5xl font-bold text-center">
+        Let's get some <span class="text-violet-500">Moooooney!!</span>
+      </h1>
+    </header>
+    <main class="w-3/4 mx-auto">
+      <section class="grid grid-cols-3 gap-4 mt-40">
+        <div class="space-y-5 bg-lime-400 p-10 rounded">
+          <h1 class="text-white text-2xl font-bold">Deposit:</h1>
+          <p id="showDeposit" class="text-white text-2xl">$00</p>
+        </div>
+        <div class="space-y-5 bg-red-400 p-10 rounded">
+          <h1 class="text-white text-2xl font-bold">Withdraw:</h1>
+          <p id="showWithdraw" class="text-white text-2xl">$00</p>
+        </div>
+        <div class="space-y-5 bg-blue-400 p-10 rounded">
+          <h1 class="text-white text-2xl font-bold">Balance:</h1>
+          <p id="showBalance" class="text-white text-2xl">$00</p>
+        </div>
+      </section>
+
+      <!-- Deposit -->
+      <form class="mx-auto my-20 bg-violet-400 p-10 rounded-lg">
+        <fieldset class="border border-slate-300 p-10 text-white">
+          <legend class="text-xl px-5">Enter Amount Input:</legend>
+
+          <p>
+            <input
+              class="text-black border block border-gray-400 rounded w-full mb-4 p-2 focus:outline-gray-500"
+              type="number"
+              name="deposit"
+              id="depositInput"
+              placeholder="Enter deposit amount"
+            />
+          </p>
+
+          <button
+            id="depositButton"
+            class="text-lg border border-white px-5 py-2 hover:bg-purple-400 focus:border-gray-400 focus:text-gray-400 active:bg-purple-400"
+            type="button"
+          >
+            Deposit
+          </button>
+        </fieldset>
+      </form>
+      <!-- WithDraw -->
+      <form class="mx-auto my-20 bg-violet-400 p-10 rounded-lg">
+        <fieldset class="border border-slate-300 p-10 text-white">
+          <legend class="text-xl px-5">Enter Amount Input:</legend>
+
+          <p>
+            <input
+              class="text-black border block border-gray-400 rounded w-full mb-4 p-2 focus:outline-gray-500"
+              type="number"
+              name="withdraw"
+              id="withdrawInput"
+              placeholder="Enter withdraw amount"
+            />
+          </p>
+
+          <button
+            id="withdrawButton"
+            class="text-lg border border-white px-5 py-2 hover:bg-purple-400 focus:border-gray-400 focus:text-gray-400 active:bg-purple-400"
+            type="button"
+          >
+            Withdraw
+          </button>
+        </fieldset>
+      </form>
+    </main>
+    <script src="account.js"></script>
+  </body>
+</html>

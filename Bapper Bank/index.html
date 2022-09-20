@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Baaper Bank!!</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="mt-10 text-5xl font-bold text-center">
+        Welcome to <span class="text-violet-500">Bapp-Er-bank!!</span>
+      </h1>
+    </header>
+    <main>
+      <form class="w-[480px] mx-auto my-20 bg-violet-400 p-10 rounded-lg">
+        <fieldset class="border border-slate-500 p-10 text-white">
+          <legend class="text-xl px-5">Login Info:</legend>
+          <article class="space-y-10">
+            <p>
+              <label class="text-xl" for="name">User Name:</label>
+              <input
+                class="text-black border block border-gray-400 rounded w-full mb-4 p-2 focus:outline-gray-500"
+                type="text"
+                name="name"
+                id="user"
+                placeholder="Enter your Name"
+              />
+            </p>
+            <p>
+              <label class="text-xl" for="password">Password:</label>
+              <input
+                class="text-black border block border-gray-400 rounded w-full mb-4 p-2 focus:outline-gray-500"
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Enter your Password"
+              />
+            </p>
+          </article>
+          <button
+            id="loginSubmit"
+            class="text-lg border border-white px-5 py-2 hover:bg-purple-400 focus:border-gray-400 focus:text-gray-400 active:bg-purple-400"
+            type="button"
+          >
+            Submit
+          </button>
+        </fieldset>
+      </form>
+    </main>
+    <script src="bank.js"></script>
+  </body>
+</html>
