@@ -9,29 +9,37 @@ const showWithdraw = document.getElementById("showWithdraw");
 const showBalance = document.getElementById("showBalance");
 
 // default values
+
 let setDeposit = 0;
 let setWithdraw = 0;
 let setBalance = 0;
 
+// DRY
+function getInput(inputId) {
+  let input = document.getElementById(inputId);
+  let amount = parseInt(input.value);
+  input.value = " ";
+  return amount;
+}
+
 // deposit
 depositButton.addEventListener("click", () => {
-  let deposit = parseFloat(depositInput.value);
-  setDeposit += deposit;
+  let amount = getInput("depositInput");
+  setDeposit += amount;
   showDeposit.textContent = "$" + setDeposit.toFixed(2);
-  setBalance += deposit;
+  setBalance += amount;
   showBalance.textContent = "$" + setBalance.toFixed(2);
 });
 
 // withdraw
 withdrawButton.addEventListener("click", () => {
-  let withdraw = parseFloat(withdrawInput.value);
-  if (setBalance < withdraw) {
+  let amount = getInput("withdrawInput");
+  if (setBalance < amount) {
     alert("fuck-off");
     return;
   }
-
-  setWithdraw += withdraw;
+  setWithdraw += amount;
   showWithdraw.textContent = "$" + setWithdraw.toFixed(2);
-  setBalance -= withdraw;
+  setBalance -= amount;
   showBalance.textContent = "$" + setBalance.toFixed(2);
 });
