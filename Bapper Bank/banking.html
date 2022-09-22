@@ -17,15 +17,16 @@
       <section class="grid grid-cols-3 gap-4 mt-40">
         <div class="space-y-5 bg-lime-400 p-10 rounded">
           <h1 class="text-white text-2xl font-bold">Deposit:</h1>
-          <p id="showDeposit" class="text-white text-2xl">$00</p>
+
+          <p class="text-white text-2xl">$<span id="showDeposit">00</span></p>
         </div>
         <div class="space-y-5 bg-red-400 p-10 rounded">
           <h1 class="text-white text-2xl font-bold">Withdraw:</h1>
-          <p id="showWithdraw" class="text-white text-2xl">$00</p>
+          <p class="text-white text-2xl">$<span id="showWithdraw">00</span></p>
         </div>
         <div class="space-y-5 bg-blue-400 p-10 rounded">
           <h1 class="text-white text-2xl font-bold">Balance:</h1>
-          <p id="showBalance" class="text-white text-2xl">$00</p>
+          <p class="text-white text-2xl">$<span id="showBalance">00</span></p>
         </div>
       </section>
 
@@ -47,7 +48,7 @@
 
           <button
             id="depositButton"
-            class="text-lg border border-white px-5 py-2 hover:bg-lime-400 focus:border-gray-400 focus:text-gray-400 active:bg-purple-400"
+            class="text-lg border border-white px-5 py-2 hover:bg-lime-400 focus:border-gray-400 focus:text-gray-400 active:bg-lime-400"
             type="button"
           >
             Deposit
@@ -72,7 +73,7 @@
 
           <button
             id="withdrawButton"
-            class="text-lg border border-white px-5 py-2 hover:bg-red-400 focus:border-gray-400 focus:text-gray-400 active:bg-purple-400"
+            class="text-lg border border-white px-5 py-2 hover:bg-red-400 focus:border-gray-400 focus:text-gray-400 active:bg-red-400"
             type="button"
           >
             Withdraw
@@ -80,6 +81,6 @@
         </fieldset>
       </form>
     </main>
-    <script src="account.js"></script>
+    <script src="functional.js"></script>
   </body>
 </html>
